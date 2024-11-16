@@ -1,0 +1,75 @@
+.customShadow{
+    box-shadow: 3px 0px 5px rgba(248, 197, 193);
+}
+.userTable{
+    @apply bg-white pb-4
+}
+.userTable th{
+    @apply border text-base font-medium
+
+}
+.userTable td{
+    @apply border text-base text-center
+
+}
+
+/* scrollbar hidden */
+.scrollbar-none::-webkit-scrollbar{
+    display: none;
+
+
+}
+/* Scrollbar for WebKit browsers */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px; /* Thinner scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    border-radius: 10px; /* Rounded edges for the track */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 20px; /* More rounded scrollbar handle */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #ae1414; /* Darker color on hover */
+}
+
+/* Scrollbar for Firefox */
+.custom-scrollbar {
+    border-radius: 10px;
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: #d7d7d7 #ffffff; /* Handle and track color */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+.Marck{
+    font-family: "Marck Script", cursive;
+}
+.productFont{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.orderheading{
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.backgroundImage{
+    background-image: url('./assest/Background/mainBackground.jpg');
+    background-size: cover;
+}
+
+#chk{
+	display: none;
+}
+#chk:checked ~ .signup{
+	transform: translateY(20%);
+}
+#chk:checked ~ .login form{
+	margin-top: 5%
+}
+#chk:checked ~ .login .head {
+	font-size: 30px;
+}
