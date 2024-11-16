@@ -68,5 +68,5 @@ router.post('Add_activityUser',authToken,async(req,res)=>{
     const updateactivity = activityModel.updateOne({_id:activity_id}, { $push: { members: { $each: activity_id } } })
 })
 
-module.exports = router
+module.exports = router 
 
