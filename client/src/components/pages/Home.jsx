@@ -57,7 +57,7 @@ export default function Home() {
                       </p>
                     </div>
                     <div>
-                      <button className="absolute bottom-14 right-14 px-3 py-2 w-24 rounded-full bg-blue-500 text-white font-bold">
+                      <button className="absolute bottom-14 ml-6 right-14 px-3 py-2 w-24 rounded-full bg-blue-500 text-white font-bold">
                         Join
                       </button>
                     </div>
@@ -72,7 +72,7 @@ export default function Home() {
             onClick={() => {
               nav("/AddActivity");
             }}
-            className="font-bold p-2 rounded-lg text-white bg-blue-500 hover:bg-green-500 hover:shadow-md hover:shadow-blue-800"
+            className="font-bold p-2 rounded-lg text-white bg-green-600 hover:bg-green-700 hover:shadow-md hover:shadow-green-800"
           >
             Add post
           </button>
