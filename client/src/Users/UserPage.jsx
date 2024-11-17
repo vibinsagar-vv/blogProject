@@ -3,7 +3,6 @@ import AuthPage from "../components/pages/AuthPage";
 import ForgotPasswod from "../components/pages/ForgotPasswod";
 import OtpInput from "../components/pages/OtpInput";
 import ProfilePage from "../components/pages/Profile";
-import SearchProducts from "../components/pages/SearchProducts";
 import { Route, Routes } from "react-router-dom";
 import Home from "../components/pages/Home";
 import MyNavbar from "../components/mainHeader";
