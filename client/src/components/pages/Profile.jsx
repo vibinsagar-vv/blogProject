@@ -4,7 +4,7 @@ import { Link, Route, Routes } from "react-router-dom";
 import MyNavbar from "../mainHeader";
 import ChangeProfilePic from "../../helpers/ChangeProfilePic";
 import Context from "../../context/context";
-import ProfileDetials from "./ProfileDetials";
+import ProfileDetials from "./";
 import UpdateProfilePage from "../UpdateProfilePage";
 
 export default function ProfilePage() {
