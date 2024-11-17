@@ -32,7 +32,7 @@ export default function Home() {
                   <div className="relative w-fit h-fit bg-blue-300 flex items-center justify-center overflow-hidden">
                     {activity.images[0] ? (
                       <img
-                        src={`http://localhost:7800/ActivityImages/${activity.images[0]}`}
+                        src={`https://blogproject-server.onrender.com/ActivityImages/${activity.images[0]}`}
                         alt={activity?.title}
                         className="p-1 rounded-xl w-fit h-fit transform object-fill transition-transform duration-500 ease-in-out"
                       />
@@ -43,25 +43,24 @@ export default function Home() {
                         className="p-4 w-full h-full transform object-scale-down hover:scale-110 transition-transform duration-500 ease-in-out"
                       />
                     )}
-                    
-                    
                   </div>
                   <div className="w-full relative flex">
-                  <div className="p-4 flex flex-col justify-between h-40 lg:h-48">
-                    <h2 className="font-semibold text-lg lg:text-xl text-gray-800 truncate">
-                      {activity?.title}
-                    </h2>
-                    <p className="text-sm text-gray-500 capitalize">
-                      {activity?.description}
-                    </p>
-                    <p className="text-sm text-gray-700 font-bold">
-                      creator : {activity?.creator_id?.name}
-                    </p>
-
-                  </div>
-                  <div>
-                    <button className="absolute bottom-14 right-14 px-3 py-2 w-24 rounded-full bg-blue-500 text-white font-bold">Join</button>
-                  </div>
+                    <div className="p-4 flex flex-col justify-between h-40 lg:h-48">
+                      <h2 className="font-semibold text-lg lg:text-xl text-gray-800 truncate">
+                        {activity?.title}
+                      </h2>
+                      <p className="text-sm text-gray-500 capitalize">
+                        {activity?.description}
+                      </p>
+                      <p className="text-sm text-gray-700 font-bold">
+                        creator : {activity?.creator_id?.name}
+                      </p>
+                    </div>
+                    <div>
+                      <button className="absolute bottom-14 right-14 px-3 py-2 w-24 rounded-full bg-blue-500 text-white font-bold">
+                        Join
+                      </button>
+                    </div>
                   </div>
                 </Link>
               ))}

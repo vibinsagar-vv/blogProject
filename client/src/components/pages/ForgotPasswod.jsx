@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
-import { FaLock } from 'react-icons/fa'; // Importing Lock icon from react-icons
-import { toast } from 'react-toastify';
+import React, { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { FaLock } from "react-icons/fa"; // Importing Lock icon from react-icons
+import { toast } from "react-toastify";
 
 export default function ForgotPassword() {
   const [data, setData] = useState({});
@@ -23,30 +23,30 @@ export default function ForgotPassword() {
   };
 
   const handleKeydown = (e) => {
-    if (e.key === ' ') {
+    if (e.key === " ") {
       e.preventDefault();
     }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const url = 'http://localhost:7800/user/changepassword';
+    const url = "https://blogproject-server.onrender.com/user/changepassword";
 
     try {
       const res = await axios.post(url, data);
       if (res.data.status === true) {
         localStorage.setItem("verification", res.data.Otp);
         sessionStorage.setItem("targetTime", res.data.time);
-        localStorage.setItem('token', res.data.token);
-        sessionStorage.setItem('email', res.data.email);
-        nav('/');
+        localStorage.setItem("token", res.data.token);
+        sessionStorage.setItem("email", res.data.email);
+        nav("/");
       }
       if (res.data.status === false) {
         toast.error(res.data.message);
       }
     } catch (error) {
       console.log(error);
-      toast.error('An error occurred while processing your request.');
+      toast.error("An error occurred while processing your request.");
     }
   };
 
@@ -60,7 +60,7 @@ export default function ForgotPassword() {
               This Email Doesn't Exist
             </h2>
             <button
-              onClick={() => nav('/usereg/register')}
+              onClick={() => nav("/usereg/register")}
               className="w-full px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600 focus:outline-none"
             >
               Sign Up
@@ -94,7 +94,7 @@ export default function ForgotPassword() {
               onChange={handleChange}
               onKeyDown={handleKeydown}
               className={`w-full mt-1 px-4 py-2 border ${
-                valData.email ? 'border-red-500' : 'border-gray-300'
+                valData.email ? "border-red-500" : "border-gray-300"
               } rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500`}
             />
             {valData.email && (

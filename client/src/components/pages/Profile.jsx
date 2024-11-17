@@ -66,7 +66,7 @@ export default function ProfilePage() {
                   {user?.profilePic ? (
                     <img
                       className="w-20 h-20 rounded-full"
-                      src={`http://localhost:7800/profilePhotos/${user.profilePic}`}
+                      src={`https://blogproject-server.onrender.com/profilePhotos/${user.profilePic}`}
                       alt=""
                     />
                   ) : (

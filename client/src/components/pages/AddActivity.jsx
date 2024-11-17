@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function AddActivity({ onClose, fetchData }) {
   const [images, setImages] = useState([]);
-  const nav = useNavigate()
+  const nav = useNavigate();
   const [imagePreviews, setImagePreviews] = useState([]);
   const [data, SetData] = useState({
     title: "",
@@ -56,7 +56,7 @@ export default function AddActivity({ onClose, fetchData }) {
     console.log(formData.getAll("images"));
 
     const resData = await AXIOS.post(
-      "http://localhost:7800/user/AddActivity",
+      "https://blogproject-server.onrender.com/user/AddActivity",
       formData,
       {
         headers: {
@@ -67,11 +67,11 @@ export default function AddActivity({ onClose, fetchData }) {
     );
     if (resData.data.success) {
       toast.success(resData.data.message);
-      nav('/')
+      nav("/");
     }
     if (resData.data.error) {
       toast.error(resData.data.message);
-      nav('/')
+      nav("/");
     }
   };
 
@@ -83,7 +83,7 @@ export default function AddActivity({ onClose, fetchData }) {
           <h2 className="font-bold text-lg">Add Activity</h2>
           <div
             className="w-fit ml-auto text-2xl hover:text-pink-900 cursor-pointer"
-            onClick={()=>nav('/')}
+            onClick={() => nav("/")}
           >
             <IoIosCloseCircle />
           </div>

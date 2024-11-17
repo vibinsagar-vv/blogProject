@@ -32,7 +32,7 @@ export default function AuthPage() {
     try {
       if (signupData.password === signupData.confirmPassword) {
         const resSignUpData = await AXIOS.post(
-          "http://localhost:7800/user/generate-otp",
+          "https://blogproject-server.onrender.com/user/generate-otp",
           signupData
         );
         localStorage.setItem("token", resSignUpData.data.data);
@@ -75,7 +75,7 @@ export default function AuthPage() {
     e.preventDefault();
     try {
       const resData = await AXIOS.post(
-        "http://localhost:7800/user/login",
+        "https://blogproject-server.onrender.com/user/login",
         SignIndata
       );
 
