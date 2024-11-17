@@ -36,26 +36,21 @@ function App() {
         dispatch(setUserDetials(resData.data.data));
       }
       return resData.data;
-     
     } catch (err) {
       console.log(err);
     }
   };
 
- 
-
   useEffect(() => {
     //user Detials
     fetchUserDetials();
-
-
   }, []);
 
   return (
     <>
       <Context.Provider
         value={{
-          verified:false,
+          verified: false,
           userDetial,
           fetchUserDetials, //user detial fetch
         }}

@@ -27,7 +27,13 @@ export default function MyNavbar() {
 
   const handleLogOut = async () => {
     localStorage.clear();
+<<<<<<< HEAD
     const resData = await AXIOS.get("https://blogproject-server.onrender.com/user/logOut");
+=======
+    const resData = await AXIOS.get(
+      "https://blogproject-server.onrender.com/user/logOut"
+    );
+>>>>>>> branch_1
     if (resData.data.success) {
       toast.success(resData.data.message);
       dispatch(setUserDetials(null));
@@ -40,7 +46,7 @@ export default function MyNavbar() {
   };
 
   const handleSearch = (e) => {
-    const {value} =e.target
+    const { value } = e.target;
     if (value) {
       console.log("insearch", value);
 
@@ -67,8 +73,7 @@ export default function MyNavbar() {
         </div>
         <div className=" flex items-center justify-center md:order-2 gap-1 md:gap-3">
           <div className="flex items-center justify-center gap-5">
-            <div className="pt-1">
-            </div>
+            <div className="pt-1"></div>
             {userDetials?._id && (
               <div className=" cursor-pointer">
                 <Dropdown
@@ -96,7 +101,9 @@ export default function MyNavbar() {
                       </span>
                     </Dropdown.Header>
                     <Dropdown.Item>
-                      <Link className="w-full flex" to={"/profile"}>Profile</Link>
+                      <Link className="w-full flex" to={"/profile"}>
+                        Profile
+                      </Link>
                     </Dropdown.Item>
                     <Dropdown.Divider />
                     <Dropdown.Item
@@ -228,27 +235,33 @@ export default function MyNavbar() {
               </Link>
             </li>
             <li className="block lg:hidden">
-              {userDetials?._id ?(<div
-                onClick={handleLogOut}
-                className="block py-2 px-3 cursor-pointer bg-gray-100 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-500 md:p-0 dark:text-white md:dark:hover:text-accent-light dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >
-                <div className="flex items-center justify-center">
-                  LOG OUT
-                  <span className="py-1 pl-3 text-xl">
-                    <MdOutlineLogout />
-                  </span>
+              {userDetials?._id ? (
+                <div
+                  onClick={handleLogOut}
+                  className="block py-2 px-3 cursor-pointer bg-gray-100 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-500 md:p-0 dark:text-white md:dark:hover:text-accent-light dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >
+                  <div className="flex items-center justify-center">
+                    LOG OUT
+                    <span className="py-1 pl-3 text-xl">
+                      <MdOutlineLogout />
+                    </span>
+                  </div>
                 </div>
-              </div>):(url.pathname != "/login"&&(<Link
-                to={"/login"}
-                className="block py-2 px-3 bg-gray-100 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-accent-light md:p-0 dark:text-white md:dark:hover:text-accent-light dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >
-                <div className="flex items-center justify-center">
-                  LOG IN
-                  <span className="py-1 pl-3 text-xl">
-                    <MdOutlineLogin />
-                  </span>
-                </div>
-              </Link>))}
+              ) : (
+                url.pathname != "/login" && (
+                  <Link
+                    to={"/login"}
+                    className="block py-2 px-3 bg-gray-100 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-accent-light md:p-0 dark:text-white md:dark:hover:text-accent-light dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >
+                    <div className="flex items-center justify-center">
+                      LOG IN
+                      <span className="py-1 pl-3 text-xl">
+                        <MdOutlineLogin />
+                      </span>
+                    </div>
+                  </Link>
+                )
+              )}
             </li>
           </ul>
         </div>
