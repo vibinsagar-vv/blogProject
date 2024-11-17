@@ -76,7 +76,7 @@ export default function UpdateProfilePage() {
     // setLoading(true);
     try {
       const resData = await axios.post(
-        `http://localhost:7800/user/update-profile`,
+        `https://blogproject-server.onrender.com/user/update-profile`,
         { user },
         { headers: { token: localStorage.getItem("token") } }
       );

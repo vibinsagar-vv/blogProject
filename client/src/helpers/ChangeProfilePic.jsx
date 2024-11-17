@@ -15,7 +15,7 @@ export default function ChangeProfilePic({callfun, user, onClose }) {
     token: localStorage.getItem("token") || "",
   };
   const updateProfilePic = async () => {
-    const resData = await AXIOS.post("http://localhost:7800/user/update-user", {
+    const resData = await AXIOS.post("https://blogproject-server.onrender.com/user/update-user", {
       headers: header,
     });
 
@@ -45,7 +45,7 @@ export default function ChangeProfilePic({callfun, user, onClose }) {
     formData.append("profile",newimage)
 
     const resData = await AXIOS.post(
-        "http://localhost:7800/user/changeProfilePic",
+        "https://blogproject-server.onrender.com/user/changeProfilePic",
         formData,
         {
           headers: {
@@ -94,7 +94,7 @@ export default function ChangeProfilePic({callfun, user, onClose }) {
               ) : (
                 <img
                   className="w-40 h-40 bg-green-100 rounded-full"
-                  src={`http://localhost:7800/profilePhotos/${user.profilePic}`}
+                  src={`https://blogproject-server.onrender.com/profilePhotos/${user.profilePic}`}
                   alt=""
                 />
               )

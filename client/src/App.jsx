@@ -27,7 +27,7 @@ function App() {
         token: localStorage.getItem("token") || "",
       };
       const resData = await AXIOS.get(
-        "http://localhost:7800/user/user-detials",
+        "https://blogproject-server.onrender.com/user/user-detials",
         { headers: header }
       );
       SetUserDetial(resData.data.data);

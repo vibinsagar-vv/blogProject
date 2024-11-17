@@ -10,7 +10,7 @@ export default function SearchProductCard({data,fetchData}) {
     <div className=' bg-primary-light border-2 border-accent-light max-h-72 p-4 rounded '>
         <div className=' w-40 h-50'>
             <div className=' min-h-40 max-h-40 flex items-center justify-center'>
-            <img className='w-fit max-h-40 mx-auto' src={`http://localhost:7800/ProductImages/${data?.productImage[0]}`} alt={data.ProductName} width={120} height={120}/>
+            <img className='w-fit max-h-40 mx-auto' src={`https://blogproject-server.onrender.com/ProductImages/${data?.productImage[0]}`} alt={data.ProductName} width={120} height={120}/>
             </div>
             <div className=' min-h-12'>
             <h1 className='max-w-40  text-wrap line line-clamp-2'>{data.ProductName}</h1>

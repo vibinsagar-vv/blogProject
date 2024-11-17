@@ -27,7 +27,7 @@ export default function MyNavbar() {
 
   const handleLogOut = async () => {
     localStorage.clear();
-    const resData = await AXIOS.get("http://localhost:7800/user/logOut");
+    const resData = await AXIOS.get("https://blogproject-server.onrender.com/user/logOut");
     if (resData.data.success) {
       toast.success(resData.data.message);
       dispatch(setUserDetials(null));
@@ -79,7 +79,7 @@ export default function MyNavbar() {
                       alt="User settings"
                       img={
                         userDetials?.profilePic
-                          ? `http://localhost:7800/profilePhotos/${userDetials.profilePic}`
+                          ? `https://blogproject-server.onrender.com/profilePhotos/${userDetials.profilePic}`
                           : UserLogo
                       }
                       rounded
