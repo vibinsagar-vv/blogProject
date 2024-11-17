@@ -57,7 +57,7 @@ export default function Home() {
                       </p>
                     </div>
                     <div>
-                      <button className="absolute bottom-14 ml-6 right-14 px-3 py-2 w-24 rounded-full bg-blue-500 text-white font-bold">
+                      <button className="absolute bottom-14 ml-6 right-6 md:right-14 px-3 py-2 w-24 rounded-full bg-blue-500 text-white font-bold">
                         Join
                       </button>
                     </div>
