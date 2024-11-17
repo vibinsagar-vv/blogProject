@@ -6,7 +6,7 @@ export const fetchActivities = createAsyncThunk(
     'activities/fetchActivities',
     async (_, { rejectWithValue }) => {
         try {
-            const response = await axios.get('http://localhost:7800/user/fetchActivites');
+            const response = await axios.get('https://blogproject-server.onrender.com/user/fetchActivites');
             return response.data.data; 
         } catch (err) {
             return rejectWithValue(err.response?.data || 'Failed to fetch activities');
