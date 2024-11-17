@@ -27,7 +27,7 @@ export default function Home() {
                 <Link
                   to={`/activity/${activity?._id}`}
                   key={index}
-                  className="ml-3 md:ml-0 flex-shrink-0 w-96 bg-white shadow-blue-600 shadow-lg rounded-lg overflow-hidden hover:shadow-blue-600 hover:shadow-2xl transition-shadow duration-300 ease-in-out"
+                  className="ml-3 md:ml-0 flex-shrink-0 md:w-96 w-[350px] bg-white shadow-blue-600 shadow-lg rounded-lg overflow-hidden hover:shadow-blue-600 hover:shadow-2xl transition-shadow duration-300 ease-in-out"
                 >
                   <div className="relative w-fit h-fit bg-blue-300 flex items-center justify-center overflow-hidden">
                     {activity.images[0] ? (
