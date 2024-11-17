@@ -15,18 +15,14 @@ export default function ChangeProfilePic({ callfun, user, onClose }) {
     token: localStorage.getItem("token") || "",
   };
   const updateProfilePic = async () => {
-<<<<<<< HEAD
-    const resData = await AXIOS.post("https://blogproject-server.onrender.com/user/update-user", {
-      headers: header,
-    });
-=======
+
     const resData = await AXIOS.post(
       "https://blogproject-server.onrender.com/user/update-user",
       {
         headers: header,
       }
     );
->>>>>>> branch_1
+
 
     console.log("role updated", resData.data);
     if (resData.data.success) {
@@ -51,19 +47,7 @@ export default function ChangeProfilePic({ callfun, user, onClose }) {
     formData.append("profile", newimage);
 
     const resData = await AXIOS.post(
-<<<<<<< HEAD
-        "https://blogproject-server.onrender.com/user/changeProfilePic",
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-            token: localStorage.getItem("token"),
-          },
-        }
-      );
-      if (resData.data.success) {
-        toast.success(resData.data.message);
-=======
+
       "https://blogproject-server.onrender.com/user/changeProfilePic",
       formData,
       {
@@ -71,7 +55,6 @@ export default function ChangeProfilePic({ callfun, user, onClose }) {
           "Content-Type": "multipart/form-data",
           token: localStorage.getItem("token"),
         },
->>>>>>> branch_1
       }
     );
     if (resData.data.success) {

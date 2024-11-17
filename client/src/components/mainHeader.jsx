@@ -27,13 +27,10 @@ export default function MyNavbar() {
 
   const handleLogOut = async () => {
     localStorage.clear();
-<<<<<<< HEAD
-    const resData = await AXIOS.get("https://blogproject-server.onrender.com/user/logOut");
-=======
+
     const resData = await AXIOS.get(
       "https://blogproject-server.onrender.com/user/logOut"
     );
->>>>>>> branch_1
     if (resData.data.success) {
       toast.success(resData.data.message);
       dispatch(setUserDetials(null));
